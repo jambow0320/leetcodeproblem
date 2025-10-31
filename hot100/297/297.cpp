@@ -1,3 +1,5 @@
+// 注意负权值
+
 #include <string>
 #include <algorithm>
 
