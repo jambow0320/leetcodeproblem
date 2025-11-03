@@ -17,19 +17,14 @@ public:
             rot[2] = make_pair(n - i - 1, n - i - 1);
             rot[3] = make_pair(i, n - i - 1);
 
-            cout << rot[0].first << ' ' << rot[0].second << endl;
-            cout << rot[1].first << ' ' << rot[1].second << endl;
-            cout << rot[2].first << ' ' << rot[2].second << endl;
-            cout << rot[3].first << ' ' << rot[3].second << endl;
-            cout << "---------" << endl;
-
-            int len = n - 2 * (i + 1);
-            for(int j = 0; j <= len / 2; ++j)
+            int len = n - 2 * (i);
+            for(int j = 0; j < len - 1; ++j)
             {
+             
                 for(int k = 0; k < 3; ++k)
                 {
                     std::swap(matrix[rot[k].first][rot[k].second], 
-                        matrix[rot[k + 1].first][rot[k].second]);
+                        matrix[rot[k + 1].first][rot[k+1].second]);
                 
                 }
                 
